@@ -1,6 +1,6 @@
 {
   "nodes": {
-    "agensgraph": {
+    "agensgraph-src": {
       "flake": false,
       "locked": {
         "lastModified": 1757664892,
@@ -35,7 +35,7 @@
     },
     "root": {
       "inputs": {
-        "agensgraph": "agensgraph",
+        "agensgraph-src": "agensgraph-src",
         "nixpkgs": "nixpkgs"
       }
     }

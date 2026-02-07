@@ -1,0 +1,20 @@
+Fix contrib/meta extension which is pure SQL but incorrectly declares MODULE_big
+---
+--- a/contrib/meta/Makefile
++++ b/contrib/meta/Makefile
+@@ -1,6 +1,5 @@
+ # contrib/meta/Makefile
+ 
+-MODULE_big = meta
+ EXTENSION = meta
+ DATA = meta--1.0.sql
+ PGFILEDESC = "meta - Utility functions for agensgraph"
+--- a/contrib/meta/meta.control
++++ b/contrib/meta/meta.control
+@@ -1,5 +1,4 @@
+ # meta extension
+ comment = 'Utility functions for agensgraph'
+ default_version = '1.0'
+-module_pathname = '$libdir/meta'
+ schema = 'meta'
+
