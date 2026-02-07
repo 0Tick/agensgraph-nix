@@ -9,13 +9,26 @@
     };
   };
 
-  outputs = { self, nixpkgs, agensgraph }:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      agensgraph,
+    }:
     let
-      systems = [ "x86_64-linux" "aarch64-linux" ];
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+      ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
-      packages = forAllSystems (system:
+      overlays.default = final: prev: {
+        agensgraph = self.packages.${prev.system}.default;
+      };
+
+      packages = forAllSystems (
+        system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
         in
