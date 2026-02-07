@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "agensgraph": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1757664892,
+        "narHash": "sha256-jrn188kVGgFImX7zdMh1q10/p/cDH8giLYumDdOA0zw=",
+        "owner": "skaiworldwide-oss",
+        "repo": "agensgraph",
+        "rev": "5c4eca9885d768b465c18852204eb49528ef3d04",
+        "type": "github"
+      },
+      "original": {
+        "owner": "skaiworldwide-oss",
+        "ref": "v2.16.0",
+        "repo": "agensgraph",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1770197578,
+        "narHash": "sha256-AYqlWrX09+HvGs8zM6ebZ1pwUqjkfpnv8mewYwAo+iM=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "00c21e4c93d963c50d4c0c89bfa84ed6e0694df2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "agensgraph": "agensgraph",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
